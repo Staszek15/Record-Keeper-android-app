@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Record Keeper</string>
+    <string name="running">Running</string>
+    <string name="cycling">Cycling</string>
+    <string name="swimming">Swimming</string>
+    <string name="running_text">Running</string>
+    <string name="running_image_description">running_image_description</string>
+    <string name="five_km_text">5 km</string>
+    <string name="ten_km_text">10 km</string>
+    <string name="half_marathon_text">Half Marathon</string>
+    <string name="marathon_text">Marathon</string>
+    <string name="hundred_m_text">100 m</string>
+    <string name="one_km_text">1 km</string>
+    <string name="cycling_image_description">Cycling image</string>
+    <string name="cycling_text">Cycling</string>
+    <string name="longest_ride_text">Longest Distance</string>
+    <string name="highest_speed_text">Highest Speed</string>
+    <string name="biggest_climb_text">Biggest Climb</string>
+    <string name="longest_ride_hour_text">Longest Ride (time)</string>
 </resources>
