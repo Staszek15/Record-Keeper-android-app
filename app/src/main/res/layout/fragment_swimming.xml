@@ -22,9 +22,9 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:contentDescription="@string/cycling_image_description"
+                android:contentDescription="@string/running_image_description"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bike_heading" />
+                android:src="@drawable/swimming_heading" />
 
             <View
                 android:layout_width="match_parent"
@@ -38,7 +38,7 @@
                 android:layout_marginBottom="16dp"
                 android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="@string/cycling_text"
+                android:text="@string/swimming_text"
                 android:textColor="@color/white"
                 android:textSize="24sp" />
 
@@ -64,14 +64,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:text="@string/longest_ride_text"
+                    android:text="@string/fifty_m_text"
                     android:textColor="?attr/colorPrimary"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/longest_distance_value"
+                    android:id="@+id/fifty_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -82,7 +82,7 @@
                     tools:text="19:52" />
 
                 <TextView
-                    android:id="@+id/longest_distance_date"
+                    android:id="@+id/fifty_m_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -90,7 +90,7 @@
                     android:textColor="@color/dark_grey"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/longest_distance_value"
+                    app:layout_constraintTop_toBottomOf="@id/fifty_m_time"
                     tools:text="23/07/2023" />
 
 
@@ -113,14 +113,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:text="@string/longest_ride_hour_text"
+                    android:text="@string/hundred_m_text"
                     android:textColor="?attr/colorPrimary"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/longest_distance_time"
+                    android:id="@+id/hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -131,7 +131,7 @@
                     tools:text="19:52" />
 
                 <TextView
-                    android:id="@+id/longest_distance_time_date"
+                    android:id="@+id/hundred_m_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -139,7 +139,7 @@
                     android:textColor="@color/dark_grey"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/longest_distance_time"
+                    app:layout_constraintTop_toBottomOf="@id/hundred_m_time"
                     tools:text="23/07/2023" />
 
 
@@ -162,14 +162,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:text="@string/highest_speed_text"
+                    android:text="@string/two_hundred_m_text"
                     android:textColor="?attr/colorPrimary"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/highest_speed_value"
+                    android:id="@+id/two_hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -180,7 +180,7 @@
                     tools:text="19:52" />
 
                 <TextView
-                    android:id="@+id/highest_speed_date"
+                    android:id="@+id/two_hundred_m_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -188,7 +188,7 @@
                     android:textColor="@color/dark_grey"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/highest_speed_value"
+                    app:layout_constraintTop_toBottomOf="@id/two_hundred_m_time"
                     tools:text="23/07/2023" />
 
 
@@ -211,14 +211,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif"
-                    android:text="@string/biggest_climb_text"
+                    android:text="@string/four_hundred_m_text"
                     android:textColor="?attr/colorPrimary"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/bigest_climb_value"
+                    android:id="@+id/four_hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-light"
@@ -229,7 +229,7 @@
                     tools:text="19:52" />
 
                 <TextView
-                    android:id="@+id/bigest_climb_date"
+                    android:id="@+id/four_hundred_m_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
@@ -237,7 +237,106 @@
                     android:textColor="@color/dark_grey"
                     android:textSize="16sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/bigest_climb_value"
+                    app:layout_constraintTop_toBottomOf="@id/four_hundred_m_time"
+                    tools:text="23/07/2023" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/colorPrimary" />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/eight_hundred_m_text"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/eight_hundred_m_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="19:52" />
+
+                <TextView
+                    android:id="@+id/eight_hundred_m_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/eight_hundred_m_time"
+                    tools:text="23/07/2023" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/colorPrimary" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/fifteen_hundred_m_text"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fifteen_hundred_m_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="19:52" />
+
+                <TextView
+                    android:id="@+id/fifteen_hundred_m_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fifteen_hundred_m_time"
                     tools:text="23/07/2023" />
 
 

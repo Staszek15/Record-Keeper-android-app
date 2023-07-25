@@ -17,4 +17,10 @@
     <string name="highest_speed_text">Highest Speed</string>
     <string name="biggest_climb_text">Biggest Climb</string>
     <string name="longest_ride_hour_text">Longest Ride (time)</string>
+    <string name="swimming_text">Swimming</string>
+    <string name="fifty_m_text">50 m</string>
+    <string name="four_hundred_m_text">400 m</string>
+    <string name="two_hundred_m_text">200 m</string>
+    <string name="eight_hundred_m_text">800 m</string>
+    <string name="fifteen_hundred_m_text">1500 m</string>
 </resources>
