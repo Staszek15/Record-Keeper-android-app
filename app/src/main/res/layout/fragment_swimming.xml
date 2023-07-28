@@ -56,6 +56,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_swim_fifty_m"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="12dp">
@@ -104,6 +105,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_swim_hundred_m"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -153,6 +155,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_swim_two_hundred_m"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -202,6 +205,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_swim_four_hundred_m"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -250,8 +254,8 @@
                 android:background="?attr/colorPrimary" />
 
 
-
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_swim_eight_hundred_m"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
@@ -301,6 +305,7 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container_swim_fifteen_hundred_m"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"

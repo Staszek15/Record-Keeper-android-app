@@ -2,7 +2,9 @@ package com.staszek15.recordkeeper
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.fragment.app.commit
 import com.google.android.material.navigation.NavigationBarView
 import com.staszek15.recordkeeper.databinding.ActivityMainBinding
@@ -19,39 +21,59 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         binding.bottomNav.setOnItemSelectedListener(this)
     }
 
-    private fun onRunningClicked() {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.reset_running -> {
+            Toast.makeText(this, "Reseted running records.", Toast.LENGTH_LONG).show()
+            true
+        }
+        R.id.reset_cycling -> {
+            Toast.makeText(this, "Reseted cycling records.", Toast.LENGTH_LONG).show()
+            true
+        }
+        R.id.reset_swimming -> {
+            Toast.makeText(this, "Reseted swimming records.", Toast.LENGTH_LONG).show()
+            true
+        }
+        R.id.reset_all -> {
+            Toast.makeText(this, "Reseted all records.", Toast.LENGTH_LONG).show()
+            true
+        }
+        else -> super.onOptionsItemSelected(item)
+
+    }
+
+
+    private fun onRunningClicked(): Boolean {
         supportFragmentManager.commit {
             replace(R.id.frame_content, RunningFragment())
         }
+        //return boolean is used in when statement in onNavigationItemSelected() function
+        return true
     }
-    private fun onCyclingClicked() {
+
+    private fun onCyclingClicked(): Boolean {
         supportFragmentManager.commit {
             replace(R.id.frame_content, CyclingFragment())
         }
+        return true
     }
-    private fun onSwimmingClicked() {
+
+    private fun onSwimmingClicked(): Boolean {
         supportFragmentManager.commit {
             replace(R.id.frame_content, SwimmingFragment())
         }
+        return true
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.nav_running -> {
-                onRunningClicked()
-                return true
-            }
-            R.id.nav_cycling -> {
-                onCyclingClicked()
-                return true
-            }
-            R.id.nav_swimming -> {
-                onSwimmingClicked()
-                return true
-            }
-            else -> {
-                return false
-            }
-        }
+    override fun onNavigationItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.nav_running -> onRunningClicked()
+        R.id.nav_cycling -> onCyclingClicked()
+        R.id.nav_swimming -> onSwimmingClicked()
+        else -> false
     }
 }
