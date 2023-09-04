@@ -1,4 +1,4 @@
-package com.staszek15.recordkeeper
+package com.staszek15.recordkeeper.swimming
 
 import android.content.Intent
 import android.os.Bundle

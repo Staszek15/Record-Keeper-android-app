@@ -7,7 +7,10 @@ import android.view.MenuItem
 import android.widget.Toast
 import androidx.fragment.app.commit
 import com.google.android.material.navigation.NavigationBarView
+import com.staszek15.recordkeeper.cycling.CyclingFragment
 import com.staszek15.recordkeeper.databinding.ActivityMainBinding
+import com.staszek15.recordkeeper.running.RunningFragment
+import com.staszek15.recordkeeper.swimming.SwimmingFragment
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
 
@@ -44,9 +47,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
             true
         }
         else -> super.onOptionsItemSelected(item)
-
     }
-
 
     private fun onRunningClicked(): Boolean {
         supportFragmentManager.commit {

@@ -1,5 +1,6 @@
-package com.staszek15.recordkeeper
+package com.staszek15.recordkeeper.running
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -25,6 +26,28 @@ class RunningFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupClickListeners()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        getRecords()
+    }
+
+    private fun getRecords() {
+        val runningPreferences = requireContext().getSharedPreferences("runningPref", Context.MODE_PRIVATE)
+
+        binding.hundredMTime.text = runningPreferences.getString("100m record", null)
+        binding.hundredMDate.text = runningPreferences.getString("100m date", null)
+        binding.oneKmTime.text = runningPreferences.getString("1km record", null)
+        binding.oneKmDate.text = runningPreferences.getString("1km date", null)
+        binding.fiveKmTime.text = runningPreferences.getString("5km record", null)
+        binding.fiveKmDate.text = runningPreferences.getString("5km date", null)
+        binding.tenKmTime.text = runningPreferences.getString("10km record", null)
+        binding.tenKmDate.text = runningPreferences.getString("10km date", null)
+        binding.halfMarathonTime.text = runningPreferences.getString("half marathon record", null)
+        binding.halfMarathonDate.text = runningPreferences.getString("half marathon date", null)
+        binding.marathonTime.text = runningPreferences.getString("marathon record", null)
+        binding.marathonDate.text = runningPreferences.getString("marathon date", null)
     }
 
     private fun setupClickListeners() {

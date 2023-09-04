@@ -12,15 +12,15 @@
         android:theme="@style/Theme.RecordKeeper"
         tools:targetApi="31">
         <activity
-            android:name=".EditSwimmingRecordActivity"
+            android:name=".swimming.EditSwimmingRecordActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".EditCyclingRecordActivity"
+            android:name=".cycling.EditCyclingRecordActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".EditRunningRecordActivity"
+            android:name=".running.EditRunningRecordActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

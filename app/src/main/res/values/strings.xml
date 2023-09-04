@@ -27,4 +27,8 @@
     <string name="reset_cycling_records">Reset cycling records</string>
     <string name="reset_swimming_records">Reset swimming records</string>
     <string name="reset_all_records">Reset all records</string>
+    <string name="hint_input_record">Record</string>
+    <string name="hint_input_date">Date</string>
+    <string name="save_text">Save</string>
+    <string name="text_clear_record">Clear record</string>
 </resources>
