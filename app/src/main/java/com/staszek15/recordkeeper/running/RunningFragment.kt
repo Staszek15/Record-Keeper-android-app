@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.staszek15.recordkeeper.EditRecordActivity
+import com.staszek15.recordkeeper.ScreenData
 import com.staszek15.recordkeeper.databinding.FragmentRunningBinding
 
 class RunningFragment : Fragment() {
@@ -36,18 +38,18 @@ class RunningFragment : Fragment() {
     private fun getRecords() {
         val runningPreferences = requireContext().getSharedPreferences("runningPref", Context.MODE_PRIVATE)
 
-        binding.hundredMTime.text = runningPreferences.getString("100m record", null)
-        binding.hundredMDate.text = runningPreferences.getString("100m date", null)
-        binding.oneKmTime.text = runningPreferences.getString("1km record", null)
-        binding.oneKmDate.text = runningPreferences.getString("1km date", null)
-        binding.fiveKmTime.text = runningPreferences.getString("5km record", null)
-        binding.fiveKmDate.text = runningPreferences.getString("5km date", null)
-        binding.tenKmTime.text = runningPreferences.getString("10km record", null)
-        binding.tenKmDate.text = runningPreferences.getString("10km date", null)
-        binding.halfMarathonTime.text = runningPreferences.getString("half marathon record", null)
-        binding.halfMarathonDate.text = runningPreferences.getString("half marathon date", null)
-        binding.marathonTime.text = runningPreferences.getString("marathon record", null)
-        binding.marathonDate.text = runningPreferences.getString("marathon date", null)
+        binding.hundredMTime.text = runningPreferences.getString("100m Running record", null)
+        binding.hundredMDate.text = runningPreferences.getString("100m Running date", null)
+        binding.oneKmTime.text = runningPreferences.getString("1km Running record", null)
+        binding.oneKmDate.text = runningPreferences.getString("1km Running date", null)
+        binding.fiveKmTime.text = runningPreferences.getString("5km Running record", null)
+        binding.fiveKmDate.text = runningPreferences.getString("5km Running date", null)
+        binding.tenKmTime.text = runningPreferences.getString("10km Running record", null)
+        binding.tenKmDate.text = runningPreferences.getString("10km Running date", null)
+        binding.halfMarathonTime.text = runningPreferences.getString("Half Marathon Running record", null)
+        binding.halfMarathonDate.text = runningPreferences.getString("Half Marathon Running date", null)
+        binding.marathonTime.text = runningPreferences.getString("Marathon Running record", null)
+        binding.marathonDate.text = runningPreferences.getString("Marathon Running date", null)
     }
 
     private fun setupClickListeners() {
@@ -59,9 +61,10 @@ class RunningFragment : Fragment() {
         binding.containerRunMarathon.setOnClickListener { launchRunningEditScreen("Marathon") }
     }
 
-    private fun launchRunningEditScreen(distance: String) {
-        val intent = Intent(context, EditRunningRecordActivity::class.java)
-        intent.putExtra("Distance", distance)
+    private fun launchRunningEditScreen(record: String) {
+        val intent = Intent(context, EditRecordActivity::class.java)
+        val screenData = ScreenData("$record Running", "runningPref", "$record Time")
+        intent.putExtra("screenData", screenData)
         startActivity(intent)
     }
 

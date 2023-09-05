@@ -11,16 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecordKeeper"
         tools:targetApi="31">
-        <activity
-            android:name=".swimming.EditSwimmingRecordActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".cycling.EditCyclingRecordActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".running.EditRunningRecordActivity"
+        <activity android:name=".EditRecordActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity

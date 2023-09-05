@@ -4,4 +4,4 @@ data class ScreenData(
     val record: String,
     val sharedPreferencesName: String,
     val recordFieldHint: String
-)
+) : java.io.Serializable

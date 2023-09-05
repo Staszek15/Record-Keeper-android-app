@@ -1,10 +1,12 @@
 package com.staszek15.recordkeeper
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.core.content.edit
 import androidx.fragment.app.commit
 import com.google.android.material.navigation.NavigationBarView
 import com.staszek15.recordkeeper.cycling.CyclingFragment
@@ -31,22 +33,41 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.reset_running -> {
+            resetRecords("runningPref")
             Toast.makeText(this, "Reseted running records.", Toast.LENGTH_LONG).show()
             true
         }
         R.id.reset_cycling -> {
+            resetRecords("cyclingPref")
             Toast.makeText(this, "Reseted cycling records.", Toast.LENGTH_LONG).show()
             true
         }
         R.id.reset_swimming -> {
+            resetRecords("swimmingPref")
             Toast.makeText(this, "Reseted swimming records.", Toast.LENGTH_LONG).show()
             true
         }
         R.id.reset_all -> {
+            resetRecords("runningPref")
+            resetRecords("cyclingPref")
+            resetRecords("swimmingPref")
             Toast.makeText(this, "Reseted all records.", Toast.LENGTH_LONG).show()
             true
         }
         else -> super.onOptionsItemSelected(item)
+    }
+
+    private fun resetRecords(sharedPreferencesName: String) {
+        getSharedPreferences(sharedPreferencesName, Context.MODE_PRIVATE).edit {
+            clear()
+            refreshFragment(sharedPreferencesName)
+        }
+    }
+    private fun refreshFragment(sharedPreferencesName: String) = when (sharedPreferencesName) {
+        "runningPref" -> onRunningClicked()
+        "cyclingPref" -> onCyclingClicked()
+        "swimmingPref" -> onSwimmingClicked()
+        else -> false
     }
 
     private fun onRunningClicked(): Boolean {

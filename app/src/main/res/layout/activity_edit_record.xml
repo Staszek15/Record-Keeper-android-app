@@ -11,6 +11,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/hint_input_record"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -19,7 +20,6 @@
             android:id="@+id/edit_text_record"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_input_record"
             tools:text="12:03" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -30,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:hint="@string/hint_input_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_record">
@@ -38,7 +39,6 @@
             android:id="@+id/edit_text_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_input_date"
             tools:text="15th October 2022" />
     </com.google.android.material.textfield.TextInputLayout>
 
