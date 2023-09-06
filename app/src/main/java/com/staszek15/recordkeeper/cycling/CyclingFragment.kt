@@ -42,10 +42,10 @@ class CyclingFragment : Fragment() {
         binding.longestDistanceDate.text = runningPreferences.getString("Longest Distance Cycling date", null)
         binding.longestTimeValue.text = runningPreferences.getString("Longest Time Cycling record", null)
         binding.longestTimeDate.text = runningPreferences.getString("Longest Time Cycling date", null)
-        binding.highestSpeedValue.text = runningPreferences.getString("Highest speed Cycling record", null)
-        binding.highestSpeedDate.text = runningPreferences.getString("Highest speed Cycling date", null)
+        binding.highestSpeedValue.text = runningPreferences.getString("Highest Speed Cycling record", null)
+        binding.highestSpeedDate.text = runningPreferences.getString("Highest Speed Cycling date", null)
         binding.biggestClimbValue.text = runningPreferences.getString("Biggest Climb Cycling record", null)
-        binding.biggestClimbDate.text = runningPreferences.getString("Biggest climb Cycling date", null)
+        binding.biggestClimbDate.text = runningPreferences.getString("Biggest Climb Cycling date", null)
     }
 
     private fun setupClickListeners() {

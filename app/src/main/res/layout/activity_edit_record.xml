@@ -20,7 +20,8 @@
             android:id="@+id/edit_text_record"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="12:03" />
+            tools:text="12:03"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -39,7 +40,8 @@
             android:id="@+id/edit_text_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:text="15th October 2022" />
+            tools:text="15th October 2022"
+            android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
