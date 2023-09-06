@@ -1,11 +1,13 @@
 package com.staszek15.recordkeeper
 
 import android.content.Context
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
 import androidx.fragment.app.commit
 import com.google.android.material.navigation.NavigationBarView
@@ -33,36 +35,46 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.reset_running -> {
-            resetRecords("runningPref")
-            Toast.makeText(this, "Reseted running records.", Toast.LENGTH_LONG).show()
+            showAlertDialog("running", arrayOf("runningPref"))
             true
         }
         R.id.reset_cycling -> {
-            resetRecords("cyclingPref")
-            Toast.makeText(this, "Reseted cycling records.", Toast.LENGTH_LONG).show()
+            showAlertDialog("cycling", arrayOf("cyclingPref"))
             true
         }
         R.id.reset_swimming -> {
-            resetRecords("swimmingPref")
-            Toast.makeText(this, "Reseted swimming records.", Toast.LENGTH_LONG).show()
+            showAlertDialog("swimming", arrayOf("swimmingPref"))
             true
         }
         R.id.reset_all -> {
-            resetRecords("runningPref")
-            resetRecords("cyclingPref")
-            resetRecords("swimmingPref")
-            Toast.makeText(this, "Reseted all records.", Toast.LENGTH_LONG).show()
+            showAlertDialog("all", arrayOf("cyclingPref","swimmingPref","runningPref"))
             true
         }
         else -> super.onOptionsItemSelected(item)
     }
 
-    private fun resetRecords(sharedPreferencesName: String) {
-        getSharedPreferences(sharedPreferencesName, Context.MODE_PRIVATE).edit {
-            clear()
-            refreshFragment(sharedPreferencesName)
+    private fun showAlertDialog(sport: String, sharedPreferencesName: Array<String>) {
+        AlertDialog.Builder(this)
+            .setTitle("Warning!")
+            .setMessage("You are about to reset $sport records.")
+            .setPositiveButton("Reset") { _, _ ->
+                resetRecords(sharedPreferencesName)
+                Toast.makeText(this, "Reseted $sport records.", Toast.LENGTH_LONG).show()
+            }
+            .setNegativeButton("Cancel") { dialogInterface: DialogInterface, _ ->
+                dialogInterface.dismiss()
+            }
+            .show()
+    }
+
+    private fun resetRecords(sharedPreferencesNames: Array<String>) {
+        sharedPreferencesNames.forEach { name ->
+            getSharedPreferences(name, Context.MODE_PRIVATE).edit {
+                clear()
+                refreshFragment(name) }
         }
     }
+
     private fun refreshFragment(sharedPreferencesName: String) = when (sharedPreferencesName) {
         "runningPref" -> onRunningClicked()
         "cyclingPref" -> onCyclingClicked()
