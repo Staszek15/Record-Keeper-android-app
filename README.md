@@ -1,7 +1,7 @@
 # Record Keeper App
 
 <p align="left">
-  <img src="https://user-images.githubusercontent.com/98673048/273249578-449cedca-ba6f-4f11-bafc-3aad455c3884.jpg" width=20%>
+  <img src="https://github.com/Staszek15/Record-Keeper-android-app/blob/master/images/ic_launcher.png" width=20%>
 </p>
 
 
