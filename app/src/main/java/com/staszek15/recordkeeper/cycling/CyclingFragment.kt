@@ -45,7 +45,7 @@ class CyclingFragment : Fragment() {
         binding.highestSpeedValue.text = runningPreferences.getString("Highest Speed Cycling record", null)
         binding.highestSpeedDate.text = runningPreferences.getString("Highest Speed Cycling date", null)
         binding.biggestClimbValue.text = runningPreferences.getString("Biggest Climb Cycling record", null)
-        binding.biggestClimbDate.text = runningPreferences.getString("Biggest Climb Cycling date", null)
+        binding.biggestClimbDate.text = runningPreferences.getString("Biggest C limb Cycling date", null)
     }
 
     private fun setupClickListeners() {

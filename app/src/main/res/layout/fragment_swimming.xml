@@ -64,10 +64,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
+                    style="@style/RecordNameTextAppearance"
                     android:text="@string/fifty_m_text"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -75,9 +73,7 @@
                     android:id="@+id/fifty_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="20sp"
+                    style="@style/RecordValueTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="19:52" />
@@ -87,9 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
+                    style="@style/RecordDateTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/fifty_m_time"
                     tools:text="23/07/2023" />
@@ -114,10 +108,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
+                    style="@style/RecordNameTextAppearance"
                     android:text="@string/hundred_m_text"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -125,9 +117,7 @@
                     android:id="@+id/hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="20sp"
+                    style="@style/RecordValueTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="19:52" />
@@ -137,9 +127,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
+                    style="@style/RecordDateTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/hundred_m_time"
                     tools:text="23/07/2023" />
@@ -164,10 +152,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
+                    style="@style/RecordNameTextAppearance"
                     android:text="@string/two_hundred_m_text"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -175,9 +161,7 @@
                     android:id="@+id/two_hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="20sp"
+                    style="@style/RecordValueTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="19:52" />
@@ -187,9 +171,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
+                    style="@style/RecordDateTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/two_hundred_m_time"
                     tools:text="23/07/2023" />
@@ -214,10 +196,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
+                    style="@style/RecordNameTextAppearance"
                     android:text="@string/four_hundred_m_text"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -225,9 +205,7 @@
                     android:id="@+id/four_hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="20sp"
+                    style="@style/RecordValueTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="19:52" />
@@ -237,9 +215,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
+                    style="@style/RecordDateTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/four_hundred_m_time"
                     tools:text="23/07/2023" />
@@ -264,10 +240,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
+                    style="@style/RecordNameTextAppearance"
                     android:text="@string/eight_hundred_m_text"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -275,9 +249,7 @@
                     android:id="@+id/eight_hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="20sp"
+                    style="@style/RecordValueTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="19:52" />
@@ -287,9 +259,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
+                    style="@style/RecordDateTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/eight_hundred_m_time"
                     tools:text="23/07/2023" />
@@ -314,10 +284,8 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif"
+                    style="@style/RecordNameTextAppearance"
                     android:text="@string/fifteen_hundred_m_text"
-                    android:textColor="?attr/colorPrimary"
-                    android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -325,9 +293,7 @@
                     android:id="@+id/fifteen_hundred_m_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="20sp"
+                    style="@style/RecordValueTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:text="19:52" />
@@ -337,9 +303,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
-                    android:fontFamily="sans-serif-light"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="16sp"
+                    style="@style/RecordDateTextAppearance"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/fifteen_hundred_m_time"
                     tools:text="23/07/2023" />

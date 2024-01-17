@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.edit
 import androidx.fragment.app.commit
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.snackbar.Snackbar
 import com.staszek15.recordkeeper.cycling.CyclingFragment
 import com.staszek15.recordkeeper.databinding.ActivityMainBinding
 import com.staszek15.recordkeeper.running.RunningFragment
@@ -59,12 +60,18 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
             .setMessage("You are about to reset $sport records.")
             .setPositiveButton("Reset") { _, _ ->
                 resetRecords(sharedPreferencesName)
-                Toast.makeText(this, "Reseted $sport records.", Toast.LENGTH_LONG).show()
+                showConfirmation(sport)
             }
             .setNegativeButton("Cancel") { dialogInterface: DialogInterface, _ ->
                 dialogInterface.dismiss()
             }
             .show()
+    }
+
+    private fun showConfirmation(sport: String) {
+        val snackbar = Snackbar.make(binding.root, "Successfully cleared $sport records.", Snackbar.LENGTH_LONG)
+        snackbar.anchorView = binding.bottomNav
+        snackbar.show()
     }
 
     private fun resetRecords(sharedPreferencesNames: Array<String>) {
